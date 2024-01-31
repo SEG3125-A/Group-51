@@ -3,6 +3,27 @@
 <head>
 	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
 	<link href="styles/style.css" rel="stylesheet" type="text/css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+       body {
+    background-color: lightblue;
+  }
+    .slidecontainer {
+    width: 30%;
+    }
+
+      .slider {
+        -webkit-appearance: none;
+        width: 30%;
+        height: 25px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+      }
+</style>
 </head>
 
 <body>
@@ -15,7 +36,12 @@
 </div>
 
 <!-- Tab content -->
-<div id="Client" class="tabcontent">
+<div id="Client" class="tabcontent" width="50">
+  <style>
+    div {
+ background-color: rgb(98, 190, 167);
+}
+</style>
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
       Choose a Category (Dietary Restrictions):
@@ -34,7 +60,22 @@
         <option value="Non-Organic">Non-Organic</option>
         <option value="No Preference">No Preference</option>
       </select>
-</div>
+      <div class="slidecontainer">
+        <p>Price Range:</p>
+        <input type="range" min="1" max="50" value="10" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span> $</p>
+
+        <script>
+          var slider = document.getElementById("myRange");
+          var output = document.getElementById("demo");
+          output.innerHTML = slider.value;
+          
+          slider.oninput = function() {
+            output.innerHTML = this.value;
+          }
+          </script>
+    </div>
+      
 
 <div id="Products" class="tabcontent">
   <h3>Your targeted products</h3>
