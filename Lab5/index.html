@@ -1,0 +1,191 @@
+<!-- This file contains a few elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+<!-- as well as JQuery found here: https://www.w3schools.com/jquery/default.asp -->
+
+<!-- Images source: -->
+<!-- The two icons come from this bank of icons: https://icons8.com/icons.  I used the free downloadable ones.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- The head should contain an appropriate title for your site -->
+    <head>
+        <title>Module 5 - Labo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+        <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+        <!-- which is built on top of JQuery and offers additional possibilities -->
+        <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+        <!-- Your own script -->
+        <script src="scripts/service.js"></script>
+
+        <!-- Your own additional style sheet -->
+        <link href="styles/style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <!-- Using the collapsible Navbar, so we see the hamburger menu icon -->
+        <!-- It really has become a standard. -->
+        <!-- As your page is a vertical page (Module 4 requirement), you mus use the navbar -->
+        <!-- to just jump to parts of the page. What I put as First/Second/Third here would -->
+        <!-- be sections in your page. -->
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#first"><img src="images/peigne.png" alt="logo" style="width:30px;">Barber Shop</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="#second"><img src="images/tiger.png" alt="logo" style="width:30px;">Repair Bike Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#third">Checkout</a>
+                </li>   
+            </ul>
+        </div>  
+        </nav>
+        <br>
+
+        <!-- Just arbitrary divisions to see the link from the NavBar -->
+        <!-- Also, notice the use of the icon repeated from the menu to add grouping -->
+        <div class="container" id="first">
+            <h3><img src="images/peigne.png" alt="logo" style="width:40px;">Barber Shop</h3>
+            <h5>Service description</h5>
+        <p>Here is a list of services offered</p>            
+        <table class="table table-primary table-hover">
+            <thead>
+            <tr>
+                <th>Service</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Haircut</td>
+                <td>Full Cut</td>
+            </tr>
+            <tr>
+                <td>Drying</td>
+                <td>Professional Blow Dry</td>
+            </tr>
+            <tr>
+                <td>Coloring</td>
+                <td>Add colors and extensions to your hair</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h5>Meet our hairdressers</h5>
+        <div class="card-columns">
+            <div class="card bg-warning" style="width:200px">
+                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Jules</h4>
+                    <p class="card-text">The straight hair specialist.</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>Jules has been cutting hair for 4 years ... </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-danger" style="width:200px">
+                <img class="card-img-top" src="images/Erwind.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Greg</h4>
+                    <p class="card-text">The curly hair specialist</p>
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>Greg has been cutting hair for 10 years ... </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        </div>
+
+        <div class="container" id="second">
+            <h3><img src="images/tiger.png" alt="logo" style="width:40px;">Repair Bike Shop</h3>
+            <h5>Service description</h5>
+            <p>Here is a list of services offered</p>            
+        <table class="table table-primary table-hover">
+            <thead>
+            <tr>
+                <th>Service</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Tire Replacement</td>
+                <td>New Wheels</td>
+            </tr>
+            <tr>
+                <td>Oiling</td>
+                <td>Gears are oiled</td>
+            </tr>
+            <tr>
+                <td>Spray Paint</td>
+                <td>Color the Bike of Your Choosing</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h5>Meet our mechanics</h5>
+        <div class="card-columns">
+            <div class="card bg-warning" style="width:200px">
+                <img class="card-img-top" src="images/OIP.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Mike</h4>
+                    <p class="card-text">The gear specialist.</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>Mike has been repairing bikes for 10 years ...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-danger" style="width:200px">
+                <img class="card-img-top" src="images/hello.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Mellissa</h4>
+                    <p class="card-text">The wheel specialist</p>
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>Mellissa has been repairing bikes for 15 years ... </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <br>
+        <!-- This section contains elements to be validated -->
+        <!-- Refer to the JavaScript file, where JQuery is used to listen to those inputs using the ids -->
+        <div class="container" id="third">
+            <h3><img src="images/checkout.jpg" alt="logo" style="width:40px;"> Checkout</h3>
+
+            <p>Date: <input type="text" id="dateInput"></p>
+            <p>Phone Number Example <input value="(1234)" type="text" id="phone"></p>
+            <p>Credit Card: <input type="text" id="debit" title="We ask for your credit card number in case of no-show, 20$ will be charged."></p>
+        </div>
+
+    </body>
+</html>
+
